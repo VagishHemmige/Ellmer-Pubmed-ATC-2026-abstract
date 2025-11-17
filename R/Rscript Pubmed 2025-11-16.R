@@ -625,8 +625,8 @@ classified_wide <- classified_df_ollama14b %>%
 
 
 #Save results
-write_xlsx(classified_wide, "Pubmed LLM 2025-11-16.xlsx")
-write_xlsx(pubmed_df, "Pubmed 100 abstract 2025-11-16.xlsx")
+write_xlsx(classified_wide, "Results/Pubmed LLM 2025-11-16.xlsx")
+write_xlsx(pubmed_df, "Results/Pubmed 100 abstract 2025-11-16.xlsx")
 
 
 
@@ -724,9 +724,9 @@ tbl_llm_prevalence <-
 
 tbl_llm_prevalence
 
-# If you want a gt object for exporting:
+# gt object for exporting:
 gt_llm_prevalence <- as_gt(tbl_llm_prevalence)
-gtsave(gt_llm_prevalence, "llm_prevalence_table.png")
+gtsave(gt_llm_prevalence, "Results/llm_prevalence_table.png")
 
 ##############################################
 # 4. Define which boolean variables to use for agreement
@@ -834,7 +834,7 @@ pairwise_kappas <-
 
 pairwise_kappas
 
-write_xlsx(pairwise_kappas, "pairwise_kappas.xlsx")
+write_xlsx(pairwise_kappas, "Results/pairwise_kappas.xlsx")
 
 # Example: a gtsummary table for kappa values for is_id_related only
 
@@ -873,7 +873,7 @@ fleiss_results <-
   map_dfr(binary_suffixes, ~fleiss_kappa_one_var(df_raw, .x, model_prefixes))
 
 fleiss_results
-write_xlsx(fleiss_results, "fleiss_results.xlsx")
+write_xlsx(fleiss_results, "Results/fleiss_results.xlsx")
 
 tbl_fleiss <-
   fleiss_results |>
