@@ -727,6 +727,8 @@ tbl_llm_prevalence
 # gt object for exporting:
 gt_llm_prevalence <- as_gt(tbl_llm_prevalence)
 gtsave(gt_llm_prevalence, "Results/llm_prevalence_table.png")
+gtsave(gt_llm_prevalence, "Results/llm_prevalence_table.docx")
+
 
 ##############################################
 # 4. Define which boolean variables to use for agreement
