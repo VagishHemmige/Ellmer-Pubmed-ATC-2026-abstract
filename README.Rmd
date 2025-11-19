@@ -27,6 +27,8 @@ We then built a classifier using the `ellmer` R package:
 We ran the classifier on the 100 abstracts using four LLMs:
 ![Figure 1: Model Comparison](Figures/ATC-Figure-1.png)
 
-We then evaluated the concordance between models
+We then evaluated the concordance between models and find high interrater reliability.
 ![Figure 2](Figures/ATC-Figure-2.png)
+
+The proportion of questions answered `TRUE` by each model is below:
 ![Figure 3](Figures/ATC-Figure-3.png)
