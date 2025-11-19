@@ -11,8 +11,9 @@ The abstracts were pulled into R via the `easyPubMed` package.
 query <- "SRTR AND transplant AND outcomes"
 ```
 
-We then built a classifier using the `ellmer` R package:
-(<https://github.com/VagishHemmige/Ellmer-Pubmed-ATC-2026-abstract/blob/master/R/abstract-schema.R>)
+We then built a classifier using the `ellmer` R package.  
+The classification schema and prompt logic are defined in:  
+[`R/abstract-schema.R`](R/abstract-schema.R)
 
 We ran the classifier on the 100 abstracts using four LLMs: ![Figure 1:
 Model Comparison](Figures/ATC-Figure-1.png)
